@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillLoop Campus</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a class="logo" href="#">Skill<span>Loop.</span></a>
+
+    <nav>
+
+        <a href="#home">หน้าแรก</a>
+
+        <a href="#explore">ค้นหาทักษะ</a>
+
+        <a href="#about">เกี่ยวกับเรา</a>
+
+    </nav>
+
+    <button class="login-btn" onclick="showLogin()">
+
+        เข้าสู่ระบบ
+
+    </button>
+
+</header>
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="tag">LEARN • SHARE • GROW</span>
+
+        <h1>
+
+            ทักษะของคุณ<br>
+
+            อาจเป็นสิ่งที่เพื่อนกำลังตามหา
+
+        </h1>
+
+        <p>
+
+            พื้นที่แลกเปลี่ยนความรู้และความสามารถ
+
+            ระหว่างนักศึกษาภายในวิทยาลัย
+
+        </p>
+
+        <a href="#explore" class="main-btn">
+
+            ค้นหาทักษะเลย →
+
+        </a>
+
+    </div>
+
+</section>
+
+<section class="search-section" id="explore">
+
+    <h2>ค้นหาทักษะที่คุณสนใจ</h2>
+
+    <p>ค้นหาความสามารถใหม่ ๆ จากเพื่อนนักศึกษา</p>
+
+    <div class="search-box">
+
+        <input
+
+            type="text"
+
+            id="searchInput"
+
+            placeholder="ค้นหา เช่น Photoshop, ตัดต่อ, Excel..."
+
+        >
+
+        <button onclick="searchSkills()">ค้นหา</button>
+
+    </div>
+
+    <div class="categories">
+
+        <button onclick="filterCategory('ทั้งหมด')">ทั้งหมด</button>
+
+        <button onclick="filterCategory('กราฟิก')">กราฟิก</button>
+
+        <button onclick="filterCategory('ตัดต่อ')">ตัดต่อ</button>
+
+        <button onclick="filterCategory('โปรแกรม')">โปรแกรม</button>
+
+        <button onclick="filterCategory('ภาษา')">ภาษา</button>
+
+    </div>
+
+</section>
+
+<section class="skills-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <h2>ทักษะที่เปิดสอน</h2>
+
+            <p>เลือกเรียนรู้สิ่งใหม่ ๆ ไปพร้อมกับเพื่อน</p>
+
+        </div>
+
+        <button class="add-btn" onclick="addSkill()">
+
+            + เพิ่มทักษะ
+
+        </button>
+
+    </div>
+
+    <div class="skill-grid" id="skillGrid"></div>
+
+</section>
+
+<section class="about" id="about">
+
+    <h2>SkillLoop Campus</h2>
+
+    <p>
+
+        เราเชื่อว่าทุกคนมีความสามารถ
+
+        และทุกความสามารถสามารถแบ่งปันได้
+
+    </p>
+
+    <div class="about-items">
+
+        <div>🎨 แลกเปลี่ยนทักษะ</div>
+
+        <div>🤝 เรียนรู้ร่วมกัน</div>
+
+        <div>⭐ เติบโตไปด้วยกัน</div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>SkillLoop Campus</h3>
+
+    <p>Share Your Skills, Grow Together.</p>
+
+    <small>© 2026 SkillLoop Campus</small>
+
+</footer>
+
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeModal()">×</button>
+
+        <div id="modalBody"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
